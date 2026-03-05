@@ -129,7 +129,7 @@ struct ContentView: View {
     }
     
     // MARK: - CheckBox Group
-    // Square checkbox, multiple choices, checkmark with custum size
+    // Square checkbox, multiple choices, checkmark with custom size
     
     @ViewBuilder
     private var checkButtonsGroup: some View {
