@@ -18,12 +18,12 @@ CheckButton is a custom checkbox package for SwiftUI making it easy to create si
 ### Swift Package Manager
 
 You can add CheckButton as a dependency in your Swift Package Manager-enabled project. Follow these steps to integrate the package into your project:
-1. In Xcode, go to "File" -> "Add Packages...".
+1. In Xcode, go to "File" -> "Add Package Dependencies...".
 2. Enter the URL of this repository: [https://github.com/appostroph/CheckButton]
-3. Choose the desired version rule.
-4. Choose the target where you want to add the package.
-5. Click "Add Package".
-6. Wait till Xcode verify and fetch it for you.
+3. Choose the desired dependency rule.
+4. Click "Add Package".
+5. Wait till Xcode verify and fetch it for you.
+6. Choose the target where you want to add the package.
 7. Click "Add Package".
 
 ## Usage
@@ -67,10 +67,11 @@ CheckButtonGroup(items: Gender.self, config: radioConfig) { selections in
 }
 ```
 
-**(See the example file in the repository for more use cases)**
+## More Use Cases
+[Check this Example on GitHub](https://github.com/appostroph/CheckButtonExample)
 
 ## Author
-Yasin Al-Hammadi, Senior Software Engineer.
+Yasin Al-Hammadi, [appostroph](https://www.appostroph.com)
 
 ## Contributing
 Contributions to CheckButton are welcome! If you encounter any issues or have ideas for improvements, please feel free to open an issue or submit a pull request.
