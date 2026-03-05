@@ -24,14 +24,42 @@ public enum CheckmarkType {
 }
 
 @available(iOS 13, *)
+public enum ButtonSize {
+    case `default`
+    case custom(size: CGFloat)
+    
+    var rawValue: CGFloat {
+        switch self {
+            case .default: return 20
+            case .custom(size: let size): return size
+        }
+    }
+}
+
+@available(iOS 13, *)
+public enum MarkSize {
+    case `default`
+    case small
+    case custom(size: CGFloat)
+    
+    var rawValue: CGFloat {
+        switch self {
+            case .default: return 16
+            case .small: return 10
+            case .custom(size: let size): return size
+        }
+    }
+}
+
+@available(iOS 13, *)
 public struct CheckButtonConfig {
     
     let shape: CheckButtonShape
     let checkmarkType: CheckmarkType
     let multipleChoice: Bool
     let font: Font
-    let size: CGFloat
-    let markSize: CGFloat
+    let size: ButtonSize
+    let markSize: MarkSize
     let color: Color
     let borderColor: Color
     let markedBackground: Color
@@ -41,8 +69,8 @@ public struct CheckButtonConfig {
                 checkmarkType: CheckmarkType,
                 multipleChoice: Bool,
                 font: Font = .body,
-                size: CGFloat = 20,
-                markSize: CGFloat = 16,
+                size: ButtonSize = .default,
+                markSize: MarkSize = .default,
                 color: Color = .white,
                 borderColor: Color = .gray,
                 markedBackground: Color = .blue,

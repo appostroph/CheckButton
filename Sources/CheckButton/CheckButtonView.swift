@@ -184,7 +184,7 @@ internal struct CheckButtonView: View {
     private var squareButton: some View {
         let color = config.checkmarkType == .checkmark && isMarked ? config.markedBackground : config.color
         RoundedRectangle(cornerRadius: 3, style: .continuous)
-            .frame(width: config.size, height: config.size)
+            .frame(width: config.size.rawValue, height: config.size.rawValue)
             .foregroundColor(color)// isMarked ? config.markedBackground : config.color)
             .background(
                 RoundedRectangle(cornerRadius: 3, style: .continuous)
@@ -196,7 +196,7 @@ internal struct CheckButtonView: View {
     private var circleButton: some View {
         let color = config.checkmarkType == .checkmark && isMarked ? config.markedBackground : config.color
         Circle()
-            .frame(width: config.size, height: config.size)
+            .frame(width: config.size.rawValue, height: config.size.rawValue)
             .foregroundColor(color)//isMarked ? config.markedBackground : config.color)
             .background(
                 Circle()
@@ -207,14 +207,14 @@ internal struct CheckButtonView: View {
     @ViewBuilder
     private var squareMark: some View {
         RoundedRectangle(cornerRadius: 3, style: .continuous)
-            .frame(width: config.markSize, height: config.markSize)
+            .frame(width: config.markSize.rawValue, height: config.markSize.rawValue)
             .foregroundColor(isMarked ? config.markedBackground : .clear)//config.color)
     }
     
     @ViewBuilder
     private var circleMark: some View {
         Circle()
-            .frame(width: config.markSize, height: config.markSize)
+            .frame(width: config.markSize.rawValue, height: config.markSize.rawValue)
             .foregroundColor(isMarked ? config.markedBackground : .clear)//config.color)
     }
     
@@ -223,8 +223,9 @@ internal struct CheckButtonView: View {
         Image(systemName: "checkmark")
             .resizable()
             .scaledToFit()
-            .frame(width: config.markSize, height: config.markSize)
+            .frame(width: config.markSize.rawValue, height: config.markSize.rawValue)
             .opacity(isMarked ? 1 : 0)
             .foregroundColor(config.markedForeground)
     }
 }
+
